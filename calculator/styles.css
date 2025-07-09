@@ -1,0 +1,159 @@
+body {
+  width: 450px;
+  margin: 10% auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 5px;
+  font-size: 1.8rem;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  background-image: linear-gradient(to bottom right, rgba(189,13,34,1),rgba(2,0,184,1), rgba(0,0,0,1));
+}
+
+.calculator {
+  padding: 20px;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 1);
+  border-radius: 1px;
+  /* background-color:; */
+}
+
+.input {
+  border: 1px solid #ee9b9b;
+  border-radius: 30px;
+  height: 50px;
+  padding-right: 15px;
+  padding-top: 10px;
+  text-align: right;
+  margin-right: 6px;
+  font-size: 2.5rem;
+  overflow-x: auto;
+  transition: all .2s ease-in-out;
+}
+
+.input:hover {
+  border: 1px solid #bbb;
+  -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.operators {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.numpad {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(4, 48px);
+  gap: 8px;
+}
+
+.numpad .number, .numpad .dot, .numpad #clear {
+  background: #23272f;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+.operators div {
+  color: #f5f5f5;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  width: 80px;
+  text-align: center;
+  padding: 10px;
+  margin: 0px 0px 3px 0;
+  cursor: pointer;
+  background-color:#23272f;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+.operators div:hover {
+  background-color: #c91b1b;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #aaa;
+}
+
+.operators div:active {
+  font-weight: bold;
+}
+
+.leftPanel {
+  display: inline-block;
+}
+
+.numbers div {
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  width: 80px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 4px 10px 0;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+}
+
+.numbers div:hover {
+  background-color: #f1f1f1;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #bbb;
+}
+
+.numbers div:active {
+  font-weight: bold;
+}
+
+div.equal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  width: 60px;
+  height: 216px; /* 48px * 4 rows + 8px * 3 gaps = 216px */
+  margin-left: 1px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1976d2;
+  cursor: pointer;
+  box-shadow: 0 1px 8px rgba(25, 118, 210, 0.15);
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+  writing-mode: vertical-lr;
+  text-orientation:upright;
+}
+
+div.equal:hover {
+  background-color: #2196f3;
+  color: #fffde7;
+  transform: scale(1.04);
+}
+
+div.equal:active {
+  font-weight: bold;
+}
